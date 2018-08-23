@@ -30,8 +30,6 @@ R言語でバッチ処理をする為のフレームワークです。
     │   ├── ItemItemWriterInterface.R   --ItemWriter Interface
     │   ├── ItemProcessor.R          
     │   └── ItemReaderInterface.R --ItemReader Interface
-    ├── Factory               --　Factory Method 
-    │   └── IrisFactory.R     -- The Factory class dynamically changes the type of the object generated in addition to the object generation processing in the processing of the factory
     ├── ItemProcessor         --Processors responsible for data processing implement input checking and business logic
     │   └── IrisProcessor.R
     ├── ItemReader            --Output of data
