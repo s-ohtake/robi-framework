@@ -1,6 +1,5 @@
 IrisWriter <- R6Class(
   classname = "irisWriter",
-  implement = ItemWriterInterface,
   inherit   = Item,
   public   = list(
     ItemWrite = function(data,filename) {

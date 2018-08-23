@@ -1,4 +1,8 @@
-source('src/Factory/IrisFactory.R')
+source("src/ItemWriter/IrisWriter.R")
+source("src/ItemReader/IrisReader.R")
+source("src/ItemProcessor/IrisProcessor.R")
+source("src/Model/IrisModel.R")
+
 IrisStep <- R6Class(
   classname = "IrisStep",
   portable = FALSE,
@@ -8,15 +12,19 @@ IrisStep <- R6Class(
     result=list(),
     initialize=function(){
       prob<<-prob
-      ir<<-IrisFactory$new()
+      Reader<<-IrisReader$new()
+      Processor<<-IrisProcessor$new()
+      Writer<<-IrisWriter$new()
+      Model <<-IrisModel$new()
+      
     },
     Run=function(prob=NA){
       prob<<-prob
       
       StepRead()
 
-      print(paste0('train:',nrow(ir$Processor$train)))
-      print(paste0('test:',nrow(ir$Processor$test)))
+      print(paste0('train:',nrow(Processor$train)))
+      print(paste0('test:',nrow(Processor$test)))
       
       StepSvm()
       StepNnet()
@@ -27,38 +35,38 @@ IrisStep <- R6Class(
     StepRead=function(){
       # Item read
       print("read")
-      ir.d<-ir$Reader$ItemRead()
-      ir$Processor$ItemSampling(ir.d,prob)
+      ir.d<-Reader$ItemRead()
+      Processor$ItemSampling(ir.d,prob)
       
     },
     StepSvm=function(){
       print("StepSvm")
       # train
-      svm.res<-ir$Model$PredictSvm(ir$Processor$train,ir$Processor$test)
+      svm.res<-Model$PredictSvm(Processor$train,Processor$test)
       # predict
-      result[['Svm']]<<-table(svm.res,ir$Processor$test$Species)
+      result[['Svm']]<<-table(svm.res,Processor$test$Species)
     },
     StepNnet=function(){
         # train
       print("StepNnet")
       
-      nnet.res<-ir$Model$PredictNnet(ir$Processor$train,ir$Processor$test)
+      nnet.res<-Model$PredictNnet(Processor$train,Processor$test)
       # predict
-      result[['Nnet']]<<-table(nnet.res,ir$Processor$test$Species)
+      result[['Nnet']]<<-table(nnet.res,Processor$test$Species)
      
     },
     StepNb=function(){
       # train
       print("SteNnet")
       
-      nb.res<-ir$Model$PredictNb(ir$Processor$train,ir$Processor$test)
+      nb.res<-Model$PredictNb(Processor$train,Processor$test)
       # predict
-      result[['Nb']]<<-table(nb.res,ir$Processor$test$Species)
+      result[['Nb']]<<-table(nb.res,Processor$test$Species)
       
     },
     StepWrite=function(){
       filename=paste0('iris_',prob,'.txt')
-      ir$Writer$ItemWrite(result,filename)
+      Writer$ItemWrite(result,filename)
     }
   )    
 )
