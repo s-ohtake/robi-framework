@@ -82,3 +82,211 @@ R CMD BATCH --slave --vanilla  src/job/irisJob.R log/irisJob.log
 ```
 /data dir
 ```
+or
+```
+$`prob= 0.1`
+$`prob= 0.1`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         41          0         0
+  versicolor      1         44        49
+  virginica       0          0         0
+
+$`prob= 0.1`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         42          0         0
+  versicolor      0         44        12
+  virginica       0          0        37
+
+$`prob= 0.1`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         42          0         0
+  versicolor      0         44        49
+  virginica       0          0         0
+
+
+$`prob= 0.2`
+$`prob= 0.2`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         41          0         0
+  versicolor      0         35         5
+  virginica       0          4        35
+
+$`prob= 0.2`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         41          0         0
+  versicolor      0         37         5
+  virginica       0          2        35
+
+$`prob= 0.2`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         41          0         0
+  versicolor      0         39         4
+  virginica       0          0        36
+
+
+$`prob= 0.3`
+$`prob= 0.3`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         30          0         0
+  versicolor      0         33         2
+  virginica       0          5        35
+
+$`prob= 0.3`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         30          0         0
+  versicolor      0         38         3
+  virginica       0          0        34
+
+$`prob= 0.3`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         30          0         0
+  versicolor      0         32         3
+  virginica       0          6        34
+
+
+$`prob= 0.4`
+$`prob= 0.4`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         28          0         0
+  versicolor      1         25         3
+  virginica       0          3        30
+
+$`prob= 0.4`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         29          0         0
+  versicolor      0         25         2
+  virginica       0          3        31
+
+$`prob= 0.4`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         29          0         0
+  versicolor      0         23         2
+  virginica       0          5        31
+
+
+$`prob= 0.5`
+$`prob= 0.5`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         25          0         0
+  versicolor      0         25         2
+  virginica       0          1        22
+
+$`prob= 0.5`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         25          2         0
+  versicolor      0         22         1
+  virginica       0          2        23
+
+$`prob= 0.5`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         25          0         0
+  versicolor      0         25         2
+  virginica       0          1        22
+
+
+$`prob= 0.6`
+$`prob= 0.6`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         23          0         0
+  versicolor      0         14         1
+  virginica       0          0        22
+
+$`prob= 0.6`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         23          0         0
+  versicolor      0         14         2
+  virginica       0          0        21
+
+$`prob= 0.6`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         23          0         0
+  versicolor      0         14         1
+  virginica       0          0        22
+
+
+$`prob= 0.7`
+$`prob= 0.7`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa         13          0         0
+  versicolor      0         15         3
+  virginica       0          2        12
+
+$`prob= 0.7`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa         13          0         0
+  versicolor      0         16         1
+  virginica       0          1        14
+
+$`prob= 0.7`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa         13          0         0
+  versicolor      0         16         2
+  virginica       0          1        13
+
+
+$`prob= 0.8`
+$`prob= 0.8`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa          7          0         0
+  versicolor      0          9         3
+  virginica       0          0        11
+
+$`prob= 0.8`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa          7          0         0
+  versicolor      0          9         5
+  virginica       0          0         9
+
+$`prob= 0.8`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa          7          0         0
+  versicolor      0          9         3
+  virginica       0          0        11
+
+
+$`prob= 0.9`
+$`prob= 0.9`$Svm
+            
+svm.res      setosa versicolor virginica
+  setosa          4          0         0
+  versicolor      0          4         1
+  virginica       0          0         6
+
+$`prob= 0.9`$Nnet
+            
+nnet.res     setosa versicolor virginica
+  setosa          4          0         0
+  versicolor      0          4         0
+  virginica       0          0         7
+
+$`prob= 0.9`$Nb
+            
+nb.res       setosa versicolor virginica
+  setosa          4          0         0
+  versicolor      0          4         1
+  virginica       0          0         6
+```
